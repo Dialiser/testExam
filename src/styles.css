@@ -1,0 +1,419 @@
+ /* Body and Background Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #4c0000, #4c0000);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidebar Adjustments */
+  .sidebar {
+    width: 15%;
+    background: #000000; /* Hard black color for the sidebar */
+    padding: 30px 20px;
+    height: 95vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.5); /* Add subtle shadow for separation */
+  }
+  
+  .sidebar h1 {
+    color: #f04e30;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    color: #f04e30;
+  }
+  
+  .sidebar .general {
+    margin-top: auto;
+  }
+  
+  .sidebar .general li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 90px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 20px;
+    color: #f04e30;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    margin-left: 20%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #4c0000 0%, #4c0000 60%);
+    height: 100%;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar Sections Styling */
+  .navbar .sections {
+    display: flex;
+    gap: 40px; /* Space between navbar sections */
+  }
+  
+  .navbar .sections span {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .sections span:hover {
+    color: #f04e30; /* Change color on hover */
+  }
+  
+  /* Search Container */
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 10px 15px;
+    width: 300px;
+  }
+  
+  .search-bar {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .search-icon {
+    color: #ccc;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    background: #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  /* Artist Card Styling */
+   /* Artist Card Container */
+   
+.artist-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: linear-gradient(to right, #4c0000, #0a0a0a); /* Background gradient */
+    padding: 30px;
+    margin-left: 90px;
+    border-radius: 20px;
+    height: 250px;
+    width: 52%;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  }
+  
+  /* Background Overlay */
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('../assets/logo.png') center/cover no-repeat; Use your background pattern */
+    opacity: 0.2; /* Light overlay effect */
+    z-index: 1;
+  }
+  
+  /* Artist Info Section */
+  .artist-info {
+    position: relative;
+    z-index: 2; /* Place above the background */
+    color: #fff;
+  }
+  
+  .artist-info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .artist-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #ccc;
+  }
+  
+  /* Verified Artist Badge */
+  .verified-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .verified-icon {
+    width: 110px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+   
+  
+  /* Artist Image */
+  .artist-image {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    height: 100%;
+    max-width: 300px; /* Adjust image width */
+    object-fit: contain; /* Maintain aspect ratio */
+    z-index: 2; /* Place above background */
+    pointer-events: none; /* Prevent the image from blocking interactions */
+  }
+  
+  
+  /* Song Table Styling */
+  .song-table {
+    width:58%;
+    border-collapse: collapse;
+     padding: 80px;
+    background: linear-gradient(to right, #4c0000, #0a0a0a);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+   
+  .song-table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px; /* Rounded corners */
+    object-fit: cover; /* Ensures the image scales proportionally */
+  }
+  
+  
+  .song-table th,
+  .song-table td {
+    padding: 10px;
+    text-align: left;
+    color: #ccc;
+     
+  }
+  
+  .song-table thead {
+    background: #4c0000(255, 255, 255, 0.1);
+  }
+  
+  .song-table tbody tr {
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .song-table tbody tr:hover {
+    background-color:red ;
+  }
+  
+  .song-table tbody tr.active {
+    background: #f04e30;
+    color: #fff;
+  }
+  
+  /* Now Playing Card Styling */
+  .now-playing-card {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to bottom, #4c0000, #0a0a0a); /* Match the red gradient */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px; /* Rounded corners */
+    width: 280px; /* Adjust card width */
+    height: 350px; /* Adjust card height */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #fff; /* White text */
+  }
+  
+  .now-playing-card .now-playing-title {
+    margin-top: -4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ccc; /* Lighter text for the title */
+  }
+  
+  .now-playing-card img {
+    width: 220px; /* Larger image */
+    height: 174px;
+    margin-top: 50px;
+    border-radius: 10px; /* Rounded image corners */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between image and song details */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the image */
+  }
+  
+  .now-playing-card .song-info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .now-playing-card .song-info h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #f04e30; /* Highlighted red for the song title */
+  }
+  
+  .now-playing-card .song-info p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #ccc; /* Subtle gray for the artist name */
+  }
+  
+  .now-playing-card .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px; /* Space before the controls */
+  }
+  
+  .now-playing-card .progress-bar span {
+    font-size: 12px;
+    color: #aaa; /* Lighter text for time labels */
+  }
+  
+  .now-playing-card .progress-bar input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3); /* Track background */
+    border-radius: 5px;
+    outline: none;
+    margin: 0 5px;
+  }
+  
+  .now-playing-card .progress-bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f04e30; /* Red slider thumb */
+    cursor: pointer;
+  }
+  
+  .now-playing-card .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .now-playing-card .controls button {
+    background: #f04e30; /* Red background for buttons */
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%; /* Circle buttons */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .now-playing-card .controls button:hover {
+    background: #c03b27; /* Darker red on hover */
+  }
+  
+  .now-playing-card .controls button:active {
+    transform: scale(0.95); /* Add a slight shrink effect when pressed */
+  }
+  .progress-bar input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .progress-bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f04e30;
+    cursor: pointer;
+  }
+  
+  
